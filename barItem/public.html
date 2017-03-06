@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" class="feedback">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>发布图片</title>
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/feedback.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<button id="submit" class="mui-action-back mui-btn mui-btn-blue mui-btn-link mui-pull-right">发布</button>
+			<h1 class="mui-title">发布图片</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-content-padded">
+				<div class="mui-inline">标题</div>
+			</div>
+			<div class="row mui-input-row">
+				<input type="text" id="title" class="mui-input-clear question" placeholder=""></input>
+			</div>
+			<div class="mui-content-padded">
+				<div class="mui-inline">简介</div>
+			</div>
+			<div class="row mui-input-row">
+				<textarea id='question' class="mui-input-clear question" placeholder=""></textarea>
+			</div>
+			<p>图片</p>
+			<div id='image-list' class="row image-list"></div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script src=" ../js/feedback.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui('.mui-scroll-wrapper').scroll();
+		</script>
+	</body>
+
+</html>

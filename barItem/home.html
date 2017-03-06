@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>E3</title>
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<div class="mui-content">
+			<div id="slider" class="mui-slider mui-fullscreen">
+				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<div class="mui-scroll" style="position: relative;">
+						<a class="mui-control-item mui-active" href="#item1mobile">
+							推荐
+						</a>
+						<a class="mui-control-item" href="#item2mobile">
+							关注
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+							<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+						    <div class="mui-card">
+								<div class="mui-card-header mui-card-media">
+									<img src="../images/logo.png" style="border-radius: 50%;width: 34px;"/>
+									<div class="mui-media-body">
+										小M
+										<p>发表于 2016-06-30 15:30</p>
+									</div>
+								</div>
+								<div class="mui-card-content">
+									<img src="../images/yuantiao.jpg" alt="" width="100%"/>
+								</div>
+								<div class="mui-card-footer">
+									<a class="mui-card-link"  style="color: #999;"><span class="mui-icon mui-icon-star"></span></a>
+									<a class="mui-card-link"  style="color: #999;"><span class="mui-icon mui-icon-chatbubble"></span></a>
+									<a class="mui-card-link"  style="color: #999;"><span class="mui-icon mui-icon-redo"></span></a>
+								</div>
+								<h4 style="margin-left: 10px;">远方的兄弟</h2>
+								<h5 style="margin-left: 10px;margin-top: 10px;">y也玩的概发生的发生。一万谁与之照应</h5>
+								<div class="post-foot has-tags">
+									<div class="post-tags">
+										<a href="//tuchong.com/tags/上海" target="_blank">上海</a><a href="//tuchong.com/tags/纪实" target="_blank">纪实</a><a href="//tuchong.com/tags/抓拍" target="_blank">抓拍</a><a href="//tuchong.com/tags/后期" target="_blank">后期</a><a href="//tuchong.com/tags/新天地" target="_blank">新天地</a><a href="//tuchong.com/tags/人像" target="_blank">人像</a>
+									</div>
+								</div>
+								<p style="margin-left: 10px;">192个人喜欢    8个评论</p>
+							</div>
+							</div>
+							</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+							<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+							<div class="mui-card">
+								<div class="mui-card-header mui-card-media">
+									<img src="../images/logo.png" style="border-radius: 50%;width: 34px;"/>
+									<div class="mui-media-body">
+										小M
+										<p>发表于 2016-06-30 15:30</p>
+									</div>
+									<!--<img class="mui-pull-left" src="../images/logo.png" width="34px" height="34px" />
+									<h2>小M</h2>
+									<p>发表于 2016-06-30 15:30</p>-->
+								</div>
+								<div class="mui-card-content" >
+									<img src="../images/yuantiao.jpg" alt="" width="100%"/>
+								</div>
+								<div class="mui-card-footer">
+									<a class="mui-card-link"  style="color: #999;">收藏</a>
+									<a class="mui-card-link"  style="color: #999;">评论</a>
+									<a class="mui-card-link"  style="color: #999;">分享</a>
+								</div>
+								<h4 style="margin-left: 10px;">远方的兄弟</h2>
+								<h5 style="margin-left: 10px;margin-top: 10px;">y也玩的概发生的发生。一万谁与之照应</h5>
+								<div class="post-foot has-tags">
+									<div class="post-tags">
+										<a href="//tuchong.com/tags/上海" target="_blank">上海</a><a href="//tuchong.com/tags/纪实" target="_blank">纪实</a><a href="//tuchong.com/tags/抓拍" target="_blank">抓拍</a><a href="//tuchong.com/tags/后期" target="_blank">后期</a><a href="//tuchong.com/tags/新天地" target="_blank">新天地</a><a href="//tuchong.com/tags/人像" target="_blank">人像</a>
+									</div>
+								</div>
+								<p style="margin-left: 10px;">192个人喜欢    8个评论</p>
+							</div>
+							</div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/mui.min.js" ></script>
+		<script>
+			mui.init();
+			(function($) {
+				//阻尼系数
+				var deceleration = mui.os.ios?0.003:0.0009;
+				$('.mui-scroll-wrapper').scroll({
+					bounce: false,
+					indicators: true, //是否显示滚动条
+					deceleration:deceleration
+				});
+				$.plusReady(function() {
+					  $.preload({
+						id:'images-template.html',
+						url:'images-template.html',
+						styles:{
+							top:'0px',
+							bottom:'0px'
+						}
+					});
+					$('.mui-col-xs-6').on('tap','img', function(e) {
+						 mui.openWindow({
+							url:'images-template.html'
+						});
+		            });
+		            
+		              $.preload({
+						id:'imgdetail.html',
+						url:'imgdetail.html',
+						styles:{
+							top:'0px',
+							bottom:'0px'
+						}
+					});
+		            $('.mui-card-footer').on('tap','a', function(e) {
+						 mui.openWindow({
+							url:'imgdetail.html'
+						});
+		            });
+		           
+				});
+			})(mui);
+		</script>
+	</body>
+
+</html>
