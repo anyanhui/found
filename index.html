@@ -8,101 +8,59 @@
     <link rel="stylesheet" type="text/css" href="css/common.css"/>
    <script src="js/mui.min.js" charset="UTF-8"></script>
 	<script type="text/javascript" charset="UTF-8">
-		mui.init({
-			swipeBack:false
-		});
 		
-		var mainWebview;
-		var curBarItemWebview;
+		var subpages = ['barItem/home.html','barItem/compass.html','barItem/message.html','barItem/mine.html'];
+		var subpage_style = {
+		    top: '0px',
+		    bottom: '51px'
+		};
+		// 当前激活选项
+		var activeTab = subpages[0];
 		
-		var barItemWebviewArray = [];
-		var barItemArray = ['barItem/home.html','barItem/compass.html','barItem/message.html','barItem/mine.html'];
-		mui.plusReady(function(){
-			//获取当前title和当前webview
-			mainWebview = plus.webview.currentWebview();
-			plus.navigator.setStatusBarBackground( "#41cea9" );
-			//设置只支持竖屏幕显示
-			plus.screen.lockOrientation("portrait-primary");
-			//初始化与index有关的页面
-			initIndexView();
-			
-		});
-		
-		
-		//初始化
-		function initIndexView(){
-			//初始化所有bar页面
-			inittabitemWebviews();
-			//添加bar点击事件接受
-			tapBaritem();
-		}
-		
-		
-		//初始化所有bar页面
-		function inittabitemWebviews(){
-			for (var i = 0; i < barItemArray.length; i++) {
-				barItemWebviewArray[i] = mui.preload({
-					id:barItemArray[i],
-					url:barItemArray[i],
-					styles:{
-						top:'0px',
-						bottom: '51px',
-						left: '0px',
-						bounce: 'vertical',
-						bounceBackground: '#f8f8f8'
-					},
-					waiting:{
-						autoShow:false
-					}
-				});
-				barItemWebviewArray[i].hide();
-				mainWebview.append(barItemWebviewArray[i]);
-			}
-			barItemWebviewArray[0].show();
-			curBarItemWebview = barItemWebviewArray[0];
-		}
-		
-		
-		//添加点击事件
-		function tapBaritem(){
-			mui('.mui-bar-tab').on('tap','.mui-tab-item',function(){
-				var baritem = this;
-				var baritemurl = baritem.getAttribute('href'); 
-				if(baritemurl == "barItem/public.html"){
+		// 创建子页面，首个选项卡页面显示，其它均隐藏；
+		var currentWebview;
+		mui.plusReady(function() {
+		    currentWebview = plus.webview.currentWebview();
+			currentWebview.append(plus.webview.create(activeTab, activeTab, subpage_style));
+		    mui.preload({
+				id:'public.html',
+				url:'barItem/public.html',
+				styles:{
+					top:'0px',
+					bottom:'0px'
+				}
+			});
+				// 选项卡点击事件
+			mui('.mui-bar-tab').on('tap', 'a', function(e) {
+			    var targetTab = this.getAttribute('href');
+				if(targetTab == "barItem/public.html"){
 					 mui.openWindow({
 						url:'barItem/public.html',
 						show:{
 					      aniShow:"slide-in-bottom",//页面显示动画，默认为”slide-in-right“；
 					      duration:500//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
-					    },
+					    }
 					});
 					return;
 				}
-				
-//				indexof()如果为false返回－1所以前面加上~
-				if (!~curBarItemWebview.getURL().indexOf(baritemurl)) {
-					for (var i = 0; i < barItemArray.length; i++) {
-						if (barItemArray[i] == baritemurl) {
-							//更改头部名字
-							//切换baritemwebview
-							barItemWebviewArray[i].show();
-							curBarItemWebview = barItemWebviewArray[i];
-							break;
-						}
-					}
-				}
-			});
-			
-			 mui.preload({
-					id:'public.html',
-					url:'barItem/public.html',
-					styles:{
-						top:'0px',
-						bottom:'0px'
-					}
-				});
-			
-		}
+			    if (targetTab == activeTab) {
+			        return;
+			    }
+			    
+			    var targetWebview = plus.webview.getWebviewById(targetTab);
+			    if(!targetWebview){
+			        targetWebview = plus.webview.create(targetTab, targetTab, subpage_style);
+			        currentWebview.append(targetWebview );
+			    }
+			    targetWebview.show("fade-in",300);
+			    // 隐藏当前;
+			    plus.webview.hide(activeTab);
+			    // 更改当前活跃的选项卡
+			    activeTab = targetTab;
+			})
+		});
+		
+	
 		
 		
 		
