@@ -22,14 +22,11 @@
 		mui.plusReady(function() {
 		    currentWebview = plus.webview.currentWebview();
 			currentWebview.append(plus.webview.create(activeTab, activeTab, subpage_style));
-		    mui.preload({
-				id:'public.html',
-				url:'barItem/public.html',
-				styles:{
-					top:'0px',
-					bottom:'0px'
-				}
-			});
+			for(var i=1;i<subpages.length;i++){
+				var tabview = plus.webview.create(subpages[i], subpages[i], subpage_style);
+				tabview.hide();
+				currentWebview.append(tabview);
+			}
 				// 选项卡点击事件
 			mui('.mui-bar-tab').on('tap', 'a', function(e) {
 			    var targetTab = this.getAttribute('href');

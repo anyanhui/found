@@ -5,7 +5,8 @@
 			"fonts/mui.ttf",
 			"css/mui.min.css",
 			"barItem/home.html",
-			"js/mui.js"
+			"js/mui.js",
+			"css/common.css"
 		],
 		"refer": [
 			"barItem/category.html",
@@ -55,7 +56,8 @@
 			"images/yuantiao.jpg",
 			"fonts/mui.ttf",
 			"css/mui.min.css",
-			"js/mui.js"
+			"js/mui.js",
+			"css/common.css"
 		]
 	},
 	"barItem/message.html": {
@@ -72,7 +74,10 @@
 	"barItem/public.html": {
 		"resources": [
 			"css/feedback.css",
-			"js/feedback.js"
+			"js/feedback.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
 		]
 	},
 	"barItem/home.html": {
@@ -83,7 +88,9 @@
 			"js/mui.pullToRefresh.material.js",
 			"js/mui.min.js",
 			"css/mui.min.css",
-			"js/mui.js"
+			"js/mui.js",
+			"css/common.css",
+			"fonts/mui.ttf"
 		],
 		"refer": [
 			"barItem/images-template.html",
@@ -92,6 +99,16 @@
 	},
 	"barItem/systemmessage.html": {
 		"resources": [
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/mui.min.js"
+		]
+	},
+	"barItem/imgdetail.html": {
+		"resources": [
+			"images/yuantiao.jpg",
+			"images/logo.png",
+			"js/mui.min.js",
 			"fonts/mui.ttf",
 			"css/mui.min.css"
 		]

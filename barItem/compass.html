@@ -119,6 +119,16 @@
 			gallery.slider({
 			  interval:1000//自动轮播周期，若为0则不自动播放，默认为0；
 			});
+			 mui('.mui-card').on('tap','.mui-card-header', function(e) {
+				 mui.openWindow({
+					url:'othermine.html'
+				});
+		     });
+             mui('.post-tags').on('tap','a', function(e) {
+				 mui.openWindow({
+					url:'activesignchannel.html'
+				});
+            });
  	</script>
 </body>
 </html>

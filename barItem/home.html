@@ -109,6 +109,8 @@
 		<script>
 			mui.init();
 			(function($) {
+				
+				
 				//阻尼系数
 				var deceleration = mui.os.ios?0.003:0.0009;
 				$('.mui-scroll-wrapper').scroll({
@@ -145,6 +147,17 @@
 						});
 		            });
 		           
+		             $('.mui-card').on('tap','.mui-card-header', function(e) {
+						 mui.openWindow({
+							url:'othermine.html'
+						});
+		            });
+		             $('.post-tags').on('tap','a', function(e) {
+						 mui.openWindow({
+							url:'activesignchannel.html'
+						});
+		            });
+		            
 				});
 			})(mui);
 		</script>

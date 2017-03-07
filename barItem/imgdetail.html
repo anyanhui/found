@@ -38,10 +38,6 @@
 	</head>
 
 	<body>
-		<script src="../js/mui.min.js"></script>
-		<script type="text/javascript">
-			mui.init()
-		</script>
 		<header class="mui-bar mui-bar-nav">
 		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 		    <h1 class="mui-title">图片详情</h1>
@@ -106,7 +102,25 @@
 					<input type="text" placeholder="写评论。。。" style="height: 20px;width: 60%; border-radius: 20px;margin:10px;"/>
 					收藏  分享
 		</div>
-		
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			 mui('.mui-card').on('tap','.mui-card-header', function(e) {
+						 mui.openWindow({
+							url:'othermine.html'
+						});
+		            });
+		             mui('.post-tags').on('tap','a', function(e) {
+						 mui.openWindow({
+							url:'activesignchannel.html'
+						});
+		            });
+		             mui('.mui-card-footer').on('tap','a', function(e) {
+						 mui.openWindow({
+							url:'imgdetail.html'
+						});
+		            });
+		</script>
 	</body>
 
 </html>
