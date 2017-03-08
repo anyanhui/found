@@ -21,6 +21,160 @@
 				background-color: #fff;
 			}
 		</style>
+		<!--App自定义的css-->
+		<style type="text/css">
+			.mui-preview-image.mui-fullscreen {
+				position: fixed;
+				z-index: 20;
+				background-color: #000;
+			}
+			.mui-preview-header,
+			.mui-preview-footer {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				z-index: 10;
+			}
+			.mui-preview-header {
+				height: 44px;
+				top: 0;
+			}
+			.mui-preview-footer {
+				height: 50px;
+				bottom: 0px;
+			}
+			.mui-preview-header .mui-preview-indicator {
+				display: block;
+				line-height: 25px;
+				color: #fff;
+				text-align: center;
+				margin: 15px auto 4;
+				width: 70px;
+				background-color: rgba(0, 0, 0, 0.4);
+				border-radius: 12px;
+				font-size: 16px;
+			}
+			.mui-preview-image {
+				display: none;
+				-webkit-animation-duration: 0.5s;
+				animation-duration: 0.5s;
+				-webkit-animation-fill-mode: both;
+				animation-fill-mode: both;
+			}
+			.mui-preview-image.mui-preview-in {
+				-webkit-animation-name: fadeIn;
+				animation-name: fadeIn;
+			}
+			.mui-preview-image.mui-preview-out {
+				background: none;
+				-webkit-animation-name: fadeOut;
+				animation-name: fadeOut;
+			}
+			.mui-preview-image.mui-preview-out .mui-preview-header,
+			.mui-preview-image.mui-preview-out .mui-preview-footer {
+				display: none;
+			}
+			.mui-zoom-scroller {
+				position: absolute;
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-align: center;
+				-webkit-align-items: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				-webkit-backface-visibility: hidden;
+			}
+			.mui-zoom {
+				-webkit-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+			}
+			.mui-slider .mui-slider-group .mui-slider-item img {
+				width: auto;
+				height: auto;
+				max-width: 100%;
+				max-height: 100%;
+			}
+			.mui-android-4-1 .mui-slider .mui-slider-group .mui-slider-item img {
+				width: 100%;
+			}
+			.mui-android-4-1 .mui-slider.mui-preview-image .mui-slider-group .mui-slider-item {
+				display: inline-table;
+			}
+			.mui-android-4-1 .mui-slider.mui-preview-image .mui-zoom-scroller img {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.mui-preview-loading {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				display: none;
+			}
+			.mui-preview-loading.mui-active {
+				display: block;
+			}
+			.mui-preview-loading .mui-spinner-white {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -25px;
+				margin-top: -25px;
+				height: 50px;
+				width: 50px;
+			}
+			.mui-preview-image img.mui-transitioning {
+				-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+				transition: transform 0.5s ease, opacity 0.5s ease;
+			}
+			@-webkit-keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			@keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			@-webkit-keyframes fadeOut {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			@keyframes fadeOut {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			p img {
+				max-width: 100%;
+				height: auto;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -133,6 +287,8 @@
 			</div>
 		</div>
 		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/mui.zoom.js" ></script>
+		<script type="text/javascript" src="../js/mui.previewimage.js" ></script>
 		<script>
 			mui.init({
 				swipeBack: false,
@@ -156,7 +312,126 @@
 					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
 				}, 1000);
 			}
-					mui.preload({
+			mui.plusReady(function(){
+				
+//	var shares=null;
+//	var Intent=null,File=null,Uri=null,main=null;
+//	// H5 plus事件处理
+//	updateSerivces();
+//	if(plus.os.name=="Android"){
+//		main = plus.android.runtimeMainActivity();
+//		Intent = plus.android.importClass("android.content.Intent");
+//		File = plus.android.importClass("java.io.File");
+//		Uri = plus.android.importClass("android.net.Uri");
+//	}
+///**
+// * 更新分享服务
+// */
+//function updateSerivces(){
+//	plus.share.getServices( function(s){
+//		shares={};
+//		for(var i in s){
+//			var t=s[i];
+//			shares[t.id]=t;
+//		}
+//	}, function(e){
+//		outSet( "获取分享服务列表失败："+e.message );
+//	} );
+//}
+///**
+// * 分享操作
+// * @param {JSON} sb 分享操作对象s.s为分享通道对象(plus.share.ShareService)
+// * @param {Boolean} bh 是否分享链接
+// */
+//function shareAction(sb,bh) {
+//	outSet( "分享操作：" );
+//	if(!sb||!sb.s){
+//		outLine( "无效的分享服务！" );
+//		return;
+//	}
+//	var msg={content:sharecontent.value,extra:{scene:sb.x}};
+//	if(bh){
+//		msg.href="http://www.baidu.com";
+//		if(sharehrefTitle&&sharehrefTitle.value!=""){
+//			msg.title=sharehrefTitle.value;
+//		}else{
+//			msg.title = "百度";
+//		}
+//		if(sharehrefDes&&sharehrefDes.value!=""){
+//			msg.content=sharehrefDes.value;
+//		}else{
+//			msg.content="分享百度"
+//		}
+//		msg.thumbs=["_www/logo.png"];
+//		msg.pictures=["_www/logo.png"];
+//	}else{
+//		if(pic&&pic.realUrl){
+//			msg.pictures=[pic.realUrl];
+//		}else{
+//			msg.pictures=["https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=365352196,1156572815&fm=85&s=FDE48B544A887C49688955C20300E0B0"];
+//		}
+//	}
+//	// 发送分享
+//	if ( sb.s.authenticated ) {
+//		outLine( "---已授权---" );
+//		shareMessage(msg,sb.s);
+//	} else {
+//		outLine( "---未授权---" );
+//		sb.s.authorize( function(){
+//				shareMessage(msg,sb.s);
+//			},function(e){
+//			outLine( "认证授权失败："+e.code+" - "+e.message );
+//		});
+//	}
+//}
+///**
+// * 发送分享消息
+// * @param {JSON} msg
+// * @param {plus.share.ShareService} s
+// */
+//function shareMessage(msg,s){
+//	outLine(JSON.stringify(msg));
+//	s.send( msg, function(){
+//		outLine( "分享到\""+s.description+"\"成功！ " );
+//	}, function(e){
+//		outLine( "分享到\""+s.description+"\"失败: "+JSON.stringify(e) );
+//	} );
+//}
+//// 打开分享
+//function shareShow(){
+//	var shareBts=[];
+//	// 更新分享列表
+//	var ss=shares['weixin'];
+//	if(navigator.userAgent.indexOf('qihoo')<0){  //在360流应用中微信不支持分享图片
+//		ss&&ss.nativeClient&&(shareBts.push({title:'微信朋友圈',s:ss,x:'WXSceneTimeline'}),
+//		shareBts.push({title:'微信好友',s:ss,x:'WXSceneSession'}));
+//	}
+//	ss=shares['sinaweibo'];
+//	ss&&shareBts.push({title:'新浪微博',s:ss});
+//	ss=shares['qq'];
+//	ss&&ss.nativeClient&&shareBts.push({title:'QQ',s:ss});
+//	// 弹出分享列表
+//	shareBts.length>0?plus.nativeUI.actionSheet({title:'分享',cancel:'取消',buttons:shareBts},function(e){
+//		(e.index>0)&&shareAction(shareBts[e.index-1],false);
+//	}):plus.nativeUI.alert('当前环境无法支持分享操作!');
+//}
+//// 分析链接
+//function shareHref(){
+//	var shareBts=[];
+//	// 更新分享列表
+//	var ss=shares['weixin'];
+//	ss&&ss.nativeClient&&(shareBts.push({title:'微信朋友圈',s:ss,x:'WXSceneTimeline'}),
+//	shareBts.push({title:'微信好友',s:ss,x:'WXSceneSession'}));
+//	ss=shares['qq'];
+//	ss&&ss.nativeClient&&shareBts.push({title:'QQ',s:ss});
+//	// 弹出分享列表
+//	shareBts.length>0?plus.nativeUI.actionSheet({title:'分享链接',cancel:'取消',buttons:shareBts},function(e){
+//		(e.index>0)&&shareAction(shareBts[e.index-1],true);
+//	}):plus.nativeUI.alert('当前环境无法支持分享链接操作!');
+//}
+				
+				
+				mui.preload({
 						id:'images-template.html',
 						url:'images-template.html',
 						styles:{
@@ -179,22 +454,30 @@
 							bottom:'0px'
 						}
 					});
-		            mui('.mui-card-footer').on('tap','a', function(e) {
+		            mui('.mui-card-footer').on('tap','.mui-icon-star', function(e) {
+						mui.toast("标注为喜欢")
+		            });
+		            mui('.mui-card-footer').on('tap','.mui-icon-chatbubble', function(e) {
 						 mui.openWindow({
 							url:'imgdetail.html'
 						});
 		            });
-		           
-		             mui('.mui-card').on('tap','.mui-card-header', function(e) {
+		             mui('.mui-card-footer').on('tap','.mui-icon-chatbubble', function(e) {
 						 mui.openWindow({
-							url:'othermine.html'
+							url:'imgdetail.html'
 						});
+		            });
+		             mui('.mui-card').on('tap','.mui-icon-redo', function(e) {
+		             	shareShow();
 		            });
 		             mui('.post-tags').on('tap','a', function(e) {
 						 mui.openWindow({
 							url:'activesignchannel.html'
 						});
 		            });
+		            mui.previewImage();
+			})
+					
 		</script>
 	</body>
 
