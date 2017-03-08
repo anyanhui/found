@@ -103,6 +103,7 @@ input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{
 	font-family: "微软雅黑";
 	content: '+';
 	font-size: 60px;
+	line-height: 52px;
 }
 .feedback .image-item.space .image-close {
 	display: none;

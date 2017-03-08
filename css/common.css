@@ -1,10 +1,12 @@
 body {
 	background: #f8f8f8;
 }
+
 .mui-bar {
 	-webkit-box-shadow: none;
-            box-shadow: none;
+	box-shadow: none;
 }
+
 .post-foot {
 	position: relative;
 	height: 42px;
@@ -43,38 +45,187 @@ body {
 .mui-card-header {
 	position: static;
 }
+
 .mui-card-footer .mui-card-link {
 	color: #878A8E;
 }
+
 .mui-card-span {
 	margin-right: 30px;
 }
+
 .mui-compass {
 	background: #FFFFFF;
 }
+
 .mui-compass-header {
 	background: #F8F8F8;
 	text-align: center;
 }
+
 .mui-compass-header input[type='search'] {
 	background: #FFFFFF;
 	text-align: center;
-	font-size: 12px;
 }
-.mui-compass-header input[type='search']:focus
-{
-    text-align: center;
+.mui-search .mui-placeholder {
+	font-size: 14px;
 }
+
+.mui-compass-header input[type='search']:focus {
+	text-align: center;
+}
+
 .mui-compass-header input::-webkit-input-placeholder {
 	font-size: 12px;
 }
+
 .mui-compass-h5 {
 	border-left: 2px solid #4CD964;
 	padding-left: 5px;
 }
+
 .mui-compass .post-tags {
 	height: auto;
 }
+
 .mui-compass .post-tags a {
 	display: inline-block;
+}
+
+.mui-bar~.mui-content .mui-fullscreen {
+	top: 44px;
+	height: auto;
+}
+
+.mui-pull-top-tips {
+	position: absolute;
+	top: -20px;
+	left: 50%;
+	margin-left: -25px;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	z-index: 1;
+}
+
+.mui-bar~.mui-pull-top-tips {
+	top: 24px;
+}
+
+.mui-pull-top-wrapper {
+	width: 42px;
+	height: 42px;
+	display: block;
+	text-align: center;
+	background-color: #efeff4;
+	border: 1px solid #ddd;
+	border-radius: 25px;
+	background-clip: padding-box;
+	box-shadow: 0 4px 10px #bbb;
+	overflow: hidden;
+}
+
+.mui-pull-top-tips.mui-transitioning {
+	-webkit-transition-duration: 200ms;
+	transition-duration: 200ms;
+}
+
+.mui-pull-top-tips .mui-pull-loading {
+	/*-webkit-backface-visibility: hidden;
+				-webkit-transition-duration: 400ms;
+				transition-duration: 400ms;*/
+	margin: 0;
+}
+
+.mui-pull-top-wrapper .mui-icon,
+.mui-pull-top-wrapper .mui-spinner {
+	margin-top: 7px;
+}
+
+.mui-pull-top-wrapper .mui-icon.mui-reverse {
+	/*-webkit-transform: rotate(180deg) translateZ(0);*/
+}
+
+.mui-pull-bottom-tips {
+	text-align: center;
+	background-color: #efeff4;
+	font-size: 15px;
+	line-height: 40px;
+	color: #777;
+}
+
+.mui-pull-top-canvas {
+	overflow: hidden;
+	background-color: #fafafa;
+	border-radius: 40px;
+	box-shadow: 0 4px 10px #bbb;
+	width: 40px;
+	height: 40px;
+	margin: 0 auto;
+}
+
+.mui-pull-top-canvas canvas {
+	width: 40px;
+}
+
+.mui-slider-indicator.mui-segmented-control {
+	background-color: #efeff4;
+}
+.mui-activesignchannel-title {
+	position: absolute;
+    font-size: 12px;
+    color: white;
+    top: 49%;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.oa-contact-cell.mui-table .mui-table-cell {
+	padding: 11px 0;
+	vertical-align: middle;
+}
+
+.oa-contact-cell {
+	position: relative;
+	margin: -11px 0;
+}
+
+.oa-contact-avatar {
+	width: 75px;
+}
+
+.oa-contact-avatar img {
+	border-radius: 50%;
+}
+
+.oa-contact-content {
+	width: 100%;
+}
+
+.oa-contact-name {
+	margin-right: 20px;
+}
+
+.mui-table-view-cell a.active {
+	color: #007aff;
+}
+.mui-table-view-cell {
+	position: relative;
+}
+.oa-title {
+	display: inline-block;
+	width: 70%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-size: 14px;
+}
+.oa-gz {
+	position: absolute;
+	right: 10px;
+	top: 0px;
+}
+.mui-h4, h4 {
+	font-size: 16px;
 }
