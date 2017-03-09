@@ -229,3 +229,16 @@ body {
 .mui-h4, h4 {
 	font-size: 16px;
 }
+.mui-compass, body {
+	background: #FFFFFF;
+}
+.mui-search {
+	width: 90%;
+}
+.post-tags .mui-table-view-cell a {
+	background: #FFFFFF;
+	border: 0 none;
+}
+.post-tags .mui-table-view-cell .mui-activesignchannel-title {
+	left: 0px;	
+}
