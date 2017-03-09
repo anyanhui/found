@@ -65,7 +65,8 @@
 			"fonts/mui-icons-extra.ttf",
 			"css/icons-extra.css",
 			"js/mui.min.js",
-			"css/mui.min.css"
+			"css/mui.min.css",
+			"css/common.css"
 		],
 		"refer": [
 			"barItem/systemmessage.html"
@@ -77,7 +78,8 @@
 			"js/feedback.js",
 			"js/mui.min.js",
 			"fonts/mui.ttf",
-			"css/mui.min.css"
+			"css/mui.min.css",
+			"css/common.css"
 		]
 	},
 	"barItem/home.html": {
@@ -90,11 +92,15 @@
 			"css/mui.min.css",
 			"js/mui.js",
 			"css/common.css",
-			"fonts/mui.ttf"
+			"fonts/mui.ttf",
+			"js/webviewGroup.js",
+			"barItem/tuijian.html"
 		],
 		"refer": [
 			"barItem/images-template.html",
-			"barItem/imgdetail.html"
+			"barItem/imgdetail.html",
+			"barItem/tuijian.html",
+			"barItem/guanzhu.html"
 		]
 	},
 	"barItem/systemmessage.html": {
@@ -110,7 +116,46 @@
 			"images/logo.png",
 			"js/mui.min.js",
 			"fonts/mui.ttf",
-			"css/mui.min.css"
+			"css/mui.min.css",
+			"css/common.css"
+		]
+	},
+	"barItem/tuijian.html": {
+		"resources": [
+			"images/yuantiao.jpg",
+			"images/logo.png",
+			"js/mui.min.js",
+			"css/common.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/mui.previewimage.js",
+			"js/mui.zoom.js"
+		],
+		"refer": [
+			"barItem/imgdetail.html",
+			"barItem/images-template.html"
+		]
+	},
+	"barItem/guanzhu.html": {
+		"resources": [
+			"images/yuantiao.jpg",
+			"images/logo.png",
+			"js/mui.min.js",
+			"css/common.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/mui.previewimage.js",
+			"js/mui.zoom.js"
+		],
+		"refer": [
+			"barItem/othermine.html"
+		]
+	},
+	"barItem/othermine.html": {
+		"resources": [
+			"images/cbd.jpg",
+			"images/muwu.jpg",
+			"images/shuijiao.jpg"
 		]
 	}
 }
