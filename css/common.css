@@ -242,3 +242,21 @@ body {
 .post-tags .mui-table-view-cell .mui-activesignchannel-title {
 	left: 0px;	
 }
+.mui-compass .mui-segmented-control.mui-scroll-wrapper {
+	height: 60px;
+	margin-top: 15px;
+}
+.mui-compass .mui-segmented-control.mui-scroll-wrapper .mui-scroll {
+	height: 60;
+}
+.mui-compass .mui-segmented-control.mui-scroll-wrapper .mui-control-item {
+	padding: 0px 0px 0px 10px;
+	position: relative;
+}
+.mui-control-item-title {
+	position: absolute;
+	top: 10px;
+	width: 100px;
+	text-align: center;
+	color: #FFFFFF;
+}
