@@ -1,5 +1,6 @@
 body {
 	background: #f8f8f8;
+	font-size: 14px;
 }
 
 .mui-bar {
@@ -67,6 +68,7 @@ body {
 	background: #FFFFFF;
 	text-align: center;
 }
+
 .mui-search .mui-placeholder {
 	font-size: 14px;
 }
@@ -171,16 +173,18 @@ body {
 .mui-slider-indicator.mui-segmented-control {
 	background-color: #efeff4;
 }
+
 .mui-activesignchannel-title {
 	position: absolute;
-    font-size: 12px;
-    color: white;
-    top: 49%;
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+	font-size: 12px;
+	color: white;
+	top: 49%;
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
+
 .oa-contact-cell.mui-table .mui-table-cell {
 	padding: 11px 0;
 	vertical-align: middle;
@@ -210,9 +214,11 @@ body {
 .mui-table-view-cell a.active {
 	color: #007aff;
 }
+
 .mui-table-view-cell {
 	position: relative;
 }
+
 .oa-title {
 	display: inline-block;
 	width: 70%;
@@ -221,42 +227,134 @@ body {
 	text-overflow: ellipsis;
 	font-size: 14px;
 }
+
 .oa-gz {
 	position: absolute;
 	right: 10px;
 	top: 0px;
 }
-.mui-h4, h4 {
+
+.mui-h4,
+h4 {
 	font-size: 16px;
 }
-.mui-compass, body {
+
+.mui-compass,
+body {
 	background: #FFFFFF;
 }
+
 .mui-search {
 	width: 90%;
 }
+
 .post-tags .mui-table-view-cell a {
 	background: #FFFFFF;
 	border: 0 none;
 }
+
 .post-tags .mui-table-view-cell .mui-activesignchannel-title {
-	left: 0px;	
+	left: 0px;
 }
+
 .mui-compass .mui-segmented-control.mui-scroll-wrapper {
 	height: 60px;
 	margin-top: 15px;
 }
+
 .mui-compass .mui-segmented-control.mui-scroll-wrapper .mui-scroll {
 	height: 60;
 }
+
 .mui-compass .mui-segmented-control.mui-scroll-wrapper .mui-control-item {
 	padding: 0px 0px 0px 10px;
 	position: relative;
 }
+
 .mui-control-item-title {
 	position: absolute;
 	top: 10px;
 	width: 100px;
 	text-align: center;
 	color: #FFFFFF;
+}
+
+
+/*
+ * login
+ */
+
+.mui-input-group {
+	margin-top: 10px;
+}
+
+.mui-input-group:first-child {
+	margin-top: 20px;
+}
+
+.mui-input-group label {
+	width: 25%;
+	font-size: 14px;
+}
+
+.mui-input-row label~input,
+.mui-input-row label~select,
+.mui-input-row label~textarea {
+	width: 75%;
+	font-size: 14px;
+}
+
+.mui-checkbox input[type=checkbox],
+.mui-radio input[type=radio] {
+	top: 6px;
+}
+
+.mui-content-padded {
+	margin-top: 25px;
+}
+
+.mui-btn {
+	padding: 10px;
+}
+
+.link-area {
+	display: block;
+	margin-top: 25px;
+	text-align: center;
+}
+
+.spliter {
+	color: #bbb;
+	padding: 0px 8px;
+}
+
+.oauth-area {
+	position: absolute;
+	bottom: 20px;
+	left: 0px;
+	text-align: center;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+.oauth-area .oauth-btn {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-size: 30px 30px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	margin: 0px 20px;
+	/*-webkit-filter: grayscale(100%); */
+	border: solid 1px #ddd;
+	border-radius: 25px;
+}
+
+.oauth-area .oauth-btn:active {
+	border: solid 1px #aaa;
+}
+
+.oauth-area .oauth-btn.disabled {
+	background-color: #ddd;
 }
