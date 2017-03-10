@@ -26,7 +26,7 @@
 				// 选项卡点击事件
 				mui('.mui-bar-tab').on('tap', 'a', function(e) {
 					var targetTab = this.getAttribute('href');
-					if((targetTab == "barItem/mine.html"||targetTab == "barItem/public.html") && app.getState().token == null){
+					if((targetTab == "barItem/mine.html"||targetTab == "barItem/public.html" ||targetTab =="barItem/message.html") && app.getState().token == null){
 						mui.openWindow({
 							url: 'login.html',
 							show: {
