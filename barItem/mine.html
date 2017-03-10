@@ -15,6 +15,7 @@
 	<body>
 		<header class="mui-bar mui-bar-nav">
 		    <h1 class="mui-title">光哥</h1>
+		    <button id='setting' class=" mui-pull-right mui-btn-link">设置</button>
 		</header>
 		<div class="mui-content">
 			<div id="slider" class="mui-slider mui-fullscreen">
@@ -173,6 +174,7 @@
 			</div>
 		</div>
 		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/app.js" ></script>
 		<script>
 			mui.init();
 			(function($) {
@@ -184,6 +186,31 @@
 					deceleration:deceleration
 				});
 				$.plusReady(function() {
+					var settingPage = $.preload({
+						"id": 'setting',
+						"url": '/setting.html'
+					});
+					//设置
+					var settingButton = document.getElementById('setting');
+					//settingButton.style.display = settings.autoLogin ? 'block' : 'none';
+					settingButton.addEventListener('tap', function(event) {
+						$.openWindow({
+							id: 'setting',
+							show: {
+								aniShow: 'pop-in'
+							},
+							styles: {
+								popGesture: 'hide'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					});
+					
+					
+					
+					
 					  $.preload({
 						id:'images-template.html',
 						url:'images-template.html',

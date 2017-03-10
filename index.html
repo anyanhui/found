@@ -8,6 +8,7 @@
 		<link href="css/mui.min.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="css/common.css" />
 		<script src="js/mui.min.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="js/app.js" ></script>
 		<script type="text/javascript" charset="UTF-8">
 			var subpages = ['barItem/home.html', 'barItem/compass.html', 'barItem/message.html', 'barItem/mine.html'];
 			var subpage_style = {
@@ -35,6 +36,17 @@
 						});
 						return;
 					}
+					if(targetTab == "barItem/mine.html" && app.getState().token == null){
+						mui.openWindow({
+							url: 'login.html',
+							show: {
+								aniShow: "slide-in-bottom", //页面显示动画，默认为”slide-in-right“；
+								duration: 500 //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+							}
+						});
+						return;
+					}
+					
 					if(targetTab == activeTab) {
 						return;
 					}

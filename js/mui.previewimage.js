@@ -5,13 +5,15 @@
 	var defaultGroupName = '__DEFAULT';
 	var div = document.createElement('div');
 	var imgId = 0;
-	var PreviewImage = function(options) {
+	var PreviewImage = function(fun1,fun2) {
 		this.options = $.extend(true, {
 			id: '__MUI_PREVIEWIMAGE',
 			zoom: true,
 			header: '<span class="mui-preview-indicator"></span>',
 			footer: ''
-		}, options || {});
+		},  {});
+		this.fun1 = fun1;
+		this.fun2 = fun2;
 		this.init();
 		this.initEvent();
 	};
@@ -320,6 +322,7 @@
 		if (this.isShown()) {
 			return;
 		}
+		this.fun1(index);
 		if (typeof index === "number") {
 			group = group || defaultGroupName;
 			this.addImages(group, index); //刷新当前group
@@ -335,6 +338,7 @@
 		if (!this.isShown()) {
 			return;
 		}
+		this.fun2(index);
 		this.element.classList.remove($.className('preview-in'));
 		this.element.classList.add($.className('preview-out'));
 		var itemEl = this.scroller.querySelector($.classSelector('.slider-item:nth-child(' + (this.lastIndex + 1) + ')'));
@@ -369,9 +373,9 @@
 	};
 
 	var previewImageApi = null;
-	$.previewImage = function(options) {
+	$.previewImage = function(fun1,fun2) {
 		if (!previewImageApi) {
-			previewImageApi = new PreviewImage(options);
+			previewImageApi = new PreviewImage(fun1,fun2);
 		}
 		return previewImageApi;
 	};

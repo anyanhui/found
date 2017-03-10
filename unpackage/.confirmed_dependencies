@@ -1,161 +1,161 @@
 {
-	"index.html": {
-		"resources": [
-			"js/mui.min.js",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"barItem/home.html",
-			"js/mui.js",
-			"css/common.css"
-		],
-		"refer": [
-			"barItem/category.html",
-			"barItem/wishList.html",
-			"barItem/home.html",
-			"barItem/mine.html",
-			"barItem/cart.html",
-			"barItem/compass.html",
-			"barItem/message.html",
-			"barItem/public.html"
-		]
-	},
-	"barItem/mine.html": {
-		"resources": [
-			"js/mui.pullToRefresh.js",
-			"images/cbd.jpg",
-			"images/yuantiao.jpg",
-			"images/muwu.jpg",
-			"js/mui.pullToRefresh.material.js",
-			"images/shuijiao.jpg",
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"fonts/mui.ttf",
-			"images/60x60.gif"
-		],
-		"refer": [
-			"barItem/images-template.html"
-		]
-	},
-	"barItem/images-template.html": {
-		"resources": [
-			"images/logo.png",
-			"fonts/mui.ttf",
-			"js/mui.js",
-			"images/yuantiao.jpg",
-			"js/mui.min.js",
-			"css/mui.min.css"
-		]
-	},
-	"barItem/compass.html": {
-		"resources": [
-			"images/cbd.jpg",
-			"images/muwu.jpg",
-			"images/shuijiao.jpg",
-			"js/mui.min.js",
-			"images/logo.png",
-			"images/yuantiao.jpg",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"js/mui.js",
-			"css/common.css"
-		]
-	},
-	"barItem/message.html": {
-		"resources": [
-			"fonts/mui-icons-extra.ttf",
-			"css/icons-extra.css",
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"css/common.css"
-		],
-		"refer": [
-			"barItem/systemmessage.html"
-		]
-	},
-	"barItem/public.html": {
-		"resources": [
-			"css/feedback.css",
-			"js/feedback.js",
-			"js/mui.min.js",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"css/common.css"
-		]
-	},
-	"barItem/home.html": {
-		"resources": [
-			"js/mui.pullToRefresh.js",
-			"images/yuantiao.jpg",
-			"images/logo.png",
-			"js/mui.pullToRefresh.material.js",
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"js/mui.js",
-			"css/common.css",
-			"fonts/mui.ttf",
-			"js/webviewGroup.js",
-			"barItem/tuijian.html"
-		],
-		"refer": [
-			"barItem/images-template.html",
-			"barItem/imgdetail.html",
-			"barItem/tuijian.html",
-			"barItem/guanzhu.html"
-		]
-	},
-	"barItem/systemmessage.html": {
-		"resources": [
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"js/mui.min.js"
-		]
-	},
-	"barItem/imgdetail.html": {
-		"resources": [
-			"images/yuantiao.jpg",
-			"images/logo.png",
-			"js/mui.min.js",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"css/common.css"
-		]
-	},
-	"barItem/tuijian.html": {
-		"resources": [
-			"images/yuantiao.jpg",
-			"images/logo.png",
-			"js/mui.min.js",
-			"css/common.css",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"js/mui.previewimage.js",
-			"js/mui.zoom.js"
-		],
-		"refer": [
-			"barItem/imgdetail.html",
-			"barItem/images-template.html"
-		]
-	},
-	"barItem/guanzhu.html": {
-		"resources": [
-			"images/yuantiao.jpg",
-			"images/logo.png",
-			"js/mui.min.js",
-			"css/common.css",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"js/mui.previewimage.js",
-			"js/mui.zoom.js"
-		],
-		"refer": [
-			"barItem/othermine.html"
-		]
-	},
-	"barItem/othermine.html": {
-		"resources": [
-			"images/cbd.jpg",
-			"images/muwu.jpg",
-			"images/shuijiao.jpg"
-		]
-	}
+  "index.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "barItem/home.html",
+      "js/mui.js",
+      "css/common.css"
+    ],
+    "refer": [
+      "barItem/category.html",
+      "barItem/wishList.html",
+      "barItem/home.html",
+      "barItem/mine.html",
+      "barItem/cart.html",
+      "barItem/compass.html",
+      "barItem/message.html",
+      "barItem/public.html"
+    ]
+  },
+  "barItem/mine.html": {
+    "resources": [
+      "js/mui.pullToRefresh.js",
+      "images/cbd.jpg",
+      "images/yuantiao.jpg",
+      "images/muwu.jpg",
+      "js/mui.pullToRefresh.material.js",
+      "images/shuijiao.jpg",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "images/60x60.gif"
+    ],
+    "refer": [
+      "barItem/images-template.html"
+    ]
+  },
+  "barItem/images-template.html": {
+    "resources": [
+      "images/logo.png",
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "images/yuantiao.jpg",
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ]
+  },
+  "barItem/compass.html": {
+    "resources": [
+      "images/cbd.jpg",
+      "images/muwu.jpg",
+      "images/shuijiao.jpg",
+      "js/mui.min.js",
+      "images/logo.png",
+      "images/yuantiao.jpg",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/mui.js",
+      "css/common.css"
+    ]
+  },
+  "barItem/message.html": {
+    "resources": [
+      "fonts/mui-icons-extra.ttf",
+      "css/icons-extra.css",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/common.css"
+    ],
+    "refer": [
+      "barItem/systemmessage.html"
+    ]
+  },
+  "barItem/public.html": {
+    "resources": [
+      "css/feedback.css",
+      "js/feedback.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/common.css"
+    ]
+  },
+  "barItem/home.html": {
+    "resources": [
+      "js/mui.pullToRefresh.js",
+      "images/yuantiao.jpg",
+      "images/logo.png",
+      "js/mui.pullToRefresh.material.js",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/mui.js",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "js/webviewGroup.js",
+      "barItem/tuijian.html"
+    ],
+    "refer": [
+      "barItem/images-template.html",
+      "barItem/imgdetail.html",
+      "barItem/tuijian.html",
+      "barItem/guanzhu.html"
+    ]
+  },
+  "barItem/systemmessage.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/mui.min.js"
+    ]
+  },
+  "barItem/imgdetail.html": {
+    "resources": [
+      "images/yuantiao.jpg",
+      "images/logo.png",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/common.css"
+    ]
+  },
+  "barItem/tuijian.html": {
+    "resources": [
+      "images/yuantiao.jpg",
+      "images/logo.png",
+      "js/mui.min.js",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/mui.previewimage.js",
+      "js/mui.zoom.js"
+    ],
+    "refer": [
+      "barItem/imgdetail.html",
+      "barItem/images-template.html"
+    ]
+  },
+  "barItem/guanzhu.html": {
+    "resources": [
+      "images/yuantiao.jpg",
+      "images/logo.png",
+      "js/mui.min.js",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/mui.previewimage.js",
+      "js/mui.zoom.js"
+    ],
+    "refer": [
+      "barItem/othermine.html"
+    ]
+  },
+  "barItem/othermine.html": {
+    "resources": [
+      "images/cbd.jpg",
+      "images/muwu.jpg",
+      "images/shuijiao.jpg"
+    ]
+  }
 }
