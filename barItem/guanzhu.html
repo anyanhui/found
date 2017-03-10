@@ -479,10 +479,12 @@ function shareHref(){
 							url:'activesignchannel.html'
 						});
 		            });
-		            mui.previewImage(function(img){
+		             mui.previewImage(function(img){
+		            	plus.webview.currentWebview().parent().setStyle({bottom:"0px"});
 		            	plus.webview.currentWebview().setStyle({top:"0px",bottom:"0px"});
 		            },function(img){
-		            		plus.webview.currentWebview().setStyle({top:"51px",bottom:"51px"});
+		            	plus.webview.currentWebview().parent().setStyle({bottom:"51px"});
+		            	plus.webview.currentWebview().setStyle({top:"40px",bottom:"0px"});
 		            });
 			
 		</script>
