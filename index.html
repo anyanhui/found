@@ -26,6 +26,16 @@
 				// 选项卡点击事件
 				mui('.mui-bar-tab').on('tap', 'a', function(e) {
 					var targetTab = this.getAttribute('href');
+					if((targetTab == "barItem/mine.html"||targetTab == "barItem/public.html") && app.getState().token == null){
+						mui.openWindow({
+							url: 'login.html',
+							show: {
+								aniShow: "slide-in-bottom", //页面显示动画，默认为”slide-in-right“；
+								duration: 500 //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+							}
+						});
+						return;
+					}
 					if(targetTab == "barItem/public.html") {
 						mui.openWindow({
 							url: 'barItem/public.html',
@@ -36,17 +46,6 @@
 						});
 						return;
 					}
-					if(targetTab == "barItem/mine.html" && app.getState().token == null){
-						mui.openWindow({
-							url: 'login.html',
-							show: {
-								aniShow: "slide-in-bottom", //页面显示动画，默认为”slide-in-right“；
-								duration: 500 //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
-							}
-						});
-						return;
-					}
-					
 					if(targetTab == activeTab) {
 						return;
 					}
